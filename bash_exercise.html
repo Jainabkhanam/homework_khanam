@@ -1,0 +1,107 @@
+Exercise 1:
+We Use the following command to find home directory
+$echo $HOME
+Output:
+/c/Users/auuser
+
+To list files/folders in the home directory, we use:
+$ls~
+Output:
+Fall23/  K/  RESUME/  Spring2024/  desktop.ini  git/
+
+Explanation:
+In Unix-based systems, the home directory is the default directory for users. 
+The $HOME environment variable stores the path to the home directory. 
+By using echo $HOME, we can display this path. 
+The ls ~ command lists all files and folders in the home directory, allowing us to observe its contents.
+
+
+Exercise 2:
+$cd ~/../../..
+Solution:
+The command cd ~/../../.. takes up three directories from the current location.
+$cd Desktop/git/files
+
+Explanation:
+The cd command is used to change directories. In this case, ~/../../.. moves up three directories from the current location. 
+The tilde (~) represents the home directory, and each ../ moves up one directory level. 
+By combining these, we navigate to a higher-level directory.
+
+
+Exercise 3:
+Solution:
+We Use the man command or help command to read the manual page of ls:
+$man ls (or) $help --ls
+The -a flag shows all files, including hidden files.
+The -l flag lists files in long format, providing detailed information.
+
+Explanation:
+The man command displays the manual page for a given command. 
+By running $help --ls, we can access detailed information about the ls command, including its various options and flags. 
+Understanding the -a and -l flags allows us to utilize ls more effectively for listing files.
+
+Exercise 4:
+Create a new file named myfile.txt using the touch command:
+$ touch myfile.txt
+
+Use the stat command to view information about the file:
+$ stat myfile.txt
+  File: myfile.txt
+  Size: 27              Blocks: 1          IO Block: 65536  regular file
+Device: 32ba3cf1h/851066097d    Inode: 18295873486293514  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (197609/  auuser)   Gid: (197121/ UNKNOWN)
+Access: 2024-02-06 17:59:17.147107900 -0500
+Modify: 2024-02-06 17:59:14.607658400 -0500
+Change: 2024-02-06 17:59:14.594737500 -0500
+ Birth: 2024-02-06 12:47:13.784797800 -0500
+
+Explanation:
+The touch command is used to create an empty file if it does not exist or update the last modified timestamp if it does. 
+By running touch myfile.txt, we create the file myfile.txt in the current directory. 
+The stat command provides detailed information about files, including access permissions, timestamps, and file size.
+
+
+Exercise 5:
+$ ls
+Output:
+myfile.txt
+$ ls -l
+Output:
+$ ls -l
+total 5
+-rw-r--r-- 1 auuser 197121 1497 Feb  6 13:03 bash_exercise.html
+-rw-r--r-- 1 auuser 197121   27 Feb  6 12:57 myfile.txt
+
+Explanation:
+This exercise demonstrates the difference between the basic listing provided by ls and the detailed information provided by ls -l. 
+By running ls -l, we can observe additional details about the files, including their timestamps, which indicate whether the file has been recently created or updated. 
+This helps us understand how to interpret the output of ls -l and identify the status of files in the directory.
+
+
+Exercise6:
+$ echo "This line is my first line" >> myfile.txt
+
+$ cat myfile.txt
+This line is my first line
+
+Explanation:
+In this exercise, we modify the content of myfile.txt by adding a line.
+We then use the cat command to display the contents of the file. 
+This demonstrates how to edit file content and verify the changes made.
+
+
+Exercise 7:
+$ touch myfile.txt
+$ ls -l myfile.txt
+
+Output:
+total 5
+-rw-r--r-- 1 auuser 197121 1497 Feb  6 13:03 bash_exercise.html
+-rw-r--r-- 1 auuser 197121   27 Feb  6 17:59 myfile.txt
+
+Explanation:
+The touch command is commonly used to update the timestamps of files. 
+By running touch myfile.txt, we update the timestamp of myfile.txt to the current time. 
+We then use ls -l myfile.txt to view detailed information about the file, including its timestamp. 
+This demonstrates how to update file timestamps and verify the changes using ls -l.
+Here we can clearly see that the timestamp got updated.
